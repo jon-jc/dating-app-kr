@@ -1,9 +1,12 @@
+import Header from '@/components/header'
 import ProfilePage from '@/components/profile'
-import React from 'react'
 
 const page = () => {
   return (
+    <>
+    <Header />
     <ProfilePage />
+    </>
   )
 }
 

@@ -4,27 +4,12 @@ import { Button } from "@/components/ui/button"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
+import { HeartPulseIcon } from "lucide-react"
 
 const Landing = () => {
   return (
     <main className="flex flex-col min-h-[100dvh]">
-    <header className="bg-white dark:bg-gray-950 px-4 md:px-6 py-4 flex items-center justify-between shadow-sm dark:shadow-none">
-      <Link className="flex items-center gap-2" href="#">
-        <HeartIcon className="w-6 h-6 text-primary" />
-        <span className="text-lg font-semibold">Exclusive</span>
-      </Link>
-      <div className="flex items-center gap-4">
-        <Link href="/profile">
-        <Button className="rounded-full" size="icon" variant="ghost">
-          <BellIcon className="w-5 h-5" />
-        </Button>
-        <Avatar >
-          <AvatarImage alt="@user" src="/placeholder-user.jpg" />
-          <AvatarFallback>JD</AvatarFallback>
-        </Avatar>
-        </Link>
-      </div>
-    </header>
+  
     <div className="flex-1 bg-gray-100 dark:bg-gray-900 p-4 md:p-6">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
