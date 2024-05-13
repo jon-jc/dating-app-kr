@@ -13,13 +13,15 @@ const Landing = () => {
         <span className="text-lg font-semibold">Exclusive</span>
       </Link>
       <div className="flex items-center gap-4">
+        <Link href="/profile">
         <Button className="rounded-full" size="icon" variant="ghost">
           <BellIcon className="w-5 h-5" />
         </Button>
-        <Avatar>
+        <Avatar >
           <AvatarImage alt="@user" src="/placeholder-user.jpg" />
           <AvatarFallback>JD</AvatarFallback>
         </Avatar>
+        </Link>
       </div>
     </header>
     <div className="flex-1 bg-gray-100 dark:bg-gray-900 p-4 md:p-6">
