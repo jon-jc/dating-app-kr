@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 const Landing = () => {
   return (
@@ -30,7 +31,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -61,7 +62,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -83,7 +84,7 @@ const Landing = () => {
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              I'm an avid hiker and love exploring the great outdoors. In my free time, I also enjoy playing the
+              I am an avid hiker and love exploring the great outdoors. In my free time, I also enjoy playing the
               guitar and learning new languages.
             </p>
           </div>
@@ -92,7 +93,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -114,7 +115,7 @@ const Landing = () => {
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              I'm a passionate foodie who loves trying new restaurants and experimenting with recipes in the kitchen.
+              I am a passionate foodie who loves trying new restaurants and experimenting with recipes in the kitchen.
               In my free time, I enjoy painting and going to art exhibitions.
             </p>
           </div>
@@ -123,7 +124,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -145,7 +146,7 @@ const Landing = () => {
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              I'm a passionate traveler who loves exploring new cultures and cuisines. In my free time, I enjoy going
+              I am a passionate traveler who loves exploring new cultures and cuisines. In my free time, I enjoy going
               to the gym, reading books, and attending music concerts.
             </p>
           </div>
@@ -154,7 +155,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -176,7 +177,7 @@ const Landing = () => {
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              I'm a passionate about fashion and love to keep up with the latest trends. In my free time, I enjoy
+              I am a passionate about fashion and love to keep up with the latest trends. In my free time, I enjoy
               going to the movies, attending art exhibitions, and volunteering at local animal shelters.
             </p>
           </div>
@@ -185,7 +186,7 @@ const Landing = () => {
           <Link className="absolute inset-0 z-10" href="#">
             <span className="sr-only">View Profile</span>
           </Link>
-          <img
+          <Image
             alt="Profile"
             className="object-cover w-full h-64"
             height={500}
@@ -207,7 +208,7 @@ const Landing = () => {
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              I'm an avid reader and love discussing books with others. In my free time, I also enjoy hiking, playing
+              I am an avid reader and love discussing books with others. In my free time, I also enjoy hiking, playing
               chess, and learning new skills like coding and photography.
             </p>
           </div>
