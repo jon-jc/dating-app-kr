@@ -2,6 +2,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function ProfilePage() {
   return (
@@ -46,7 +47,7 @@ export default function ProfilePage() {
           <div className="space-y-2 col-span-2">
             <Label htmlFor="photo">Profile Photo</Label>
             <div className="flex items-center space-x-4">
-              <img
+              <Image
                 alt="Profile Photo"
                 className="rounded-full"
                 height={80}
