@@ -19,7 +19,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -29,9 +29,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Jiyeon, 27</h3>
+                  <h3 className="font-bold text-xl">Jiyeon, 27 (지연, 27)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Seoul
+                    Seoul (서울)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -41,6 +41,9 @@ const Landing = () => {
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                 I love exploring new cafes and trying different cuisines. My
                 hobbies include photography, reading, and traveling.
+                <br />
+                새로운 카페를 탐험하고 다양한 요리를 시도하는 것을 좋아합니다.
+                제 취미는 사진 촬영, 독서, 여행입니다.
               </p>
             </div>
           </Card>
@@ -52,7 +55,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -62,9 +65,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Minsu, 30</h3>
+                  <h3 className="font-bold text-xl">Minsu, 30 (민수, 30)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Busan
+                    Busan (부산)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -75,6 +78,9 @@ const Landing = () => {
                 I am an avid hiker and love exploring the great outdoors. In my
                 free time, I also enjoy playing the guitar and learning new
                 languages.
+                <br />
+                저는 열렬한 등산가로서 자연을 탐험하는 것을 좋아합니다. 여가
+                시간에는 기타 연주와 새로운 언어를 배우는 것을 즐깁니다.
               </p>
             </div>
           </Card>
@@ -86,7 +92,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -96,9 +102,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Yuna, 25</h3>
+                  <h3 className="font-bold text-xl">Yuna, 25 (유나, 25)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Seoul
+                    Seoul (서울)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -109,6 +115,10 @@ const Landing = () => {
                 I am a passionate foodie who loves trying new restaurants and
                 experimenting with recipes in the kitchen. In my free time, I
                 enjoy painting and going to art exhibitions.
+                <br />
+                저는 새로운 레스토랑을 시도하고 주방에서 요리법을 실험하는 것을
+                좋아하는 열정적인 미식가입니다. 여가 시간에는 그림 그리기와 미술
+                전시회를 즐깁니다.
               </p>
             </div>
           </Card>
@@ -120,7 +130,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -130,9 +140,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Seungmin, 28</h3>
+                  <h3 className="font-bold text-xl">Seungmin, 28 (승민, 28)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Incheon
+                    Incheon (인천)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -143,6 +153,10 @@ const Landing = () => {
                 I am a passionate traveler who loves exploring new cultures and
                 cuisines. In my free time, I enjoy going to the gym, reading
                 books, and attending music concerts.
+                <br />
+                저는 새로운 문화와 음식을 탐험하는 것을 좋아하는 열정적인
+                여행자입니다. 여가 시간에는 헬스장에 가고, 책을 읽고, 음악
+                콘서트에 참석하는 것을 즐깁니다.
               </p>
             </div>
           </Card>
@@ -154,7 +168,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -164,9 +178,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Eunbi, 26</h3>
+                  <h3 className="font-bold text-xl">Eunbi, 26 (은비, 26)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Daegu
+                    Daegu (대구)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -174,10 +188,14 @@ const Landing = () => {
                 </Button>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                I am a passionate about fashion and love to keep up with the
+                I am passionate about fashion and love to keep up with the
                 latest trends. In my free time, I enjoy going to the movies,
                 attending art exhibitions, and volunteering at local animal
                 shelters.
+                <br />
+                저는 패션에 열정을 가지고 있으며 최신 트렌드를 따라가는 것을
+                좋아합니다. 여가 시간에는 영화 보기, 미술 전시회 참석, 지역 동물
+                보호소에서 자원 봉사를 즐깁니다.
               </p>
             </div>
           </Card>
@@ -189,7 +207,7 @@ const Landing = () => {
               alt="Profile"
               className="object-cover w-full h-64"
               height={500}
-              src="/placeholder.svg"
+              src="/model.png"
               style={{
                 aspectRatio: "500/500",
                 objectFit: "cover",
@@ -199,9 +217,9 @@ const Landing = () => {
             <div className="bg-white dark:bg-gray-950 p-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-xl">Jaemin, 29</h3>
+                  <h3 className="font-bold text-xl">Jaemin, 29 (재민, 29)</h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Gwangju
+                    Gwangju (광주)
                   </p>
                 </div>
                 <Button className="rounded-full" size="icon" variant="ghost">
@@ -212,6 +230,10 @@ const Landing = () => {
                 I am an avid reader and love discussing books with others. In my
                 free time, I also enjoy hiking, playing chess, and learning new
                 skills like coding and photography.
+                <br />
+                저는 독서를 좋아하고 다른 사람들과 책에 대해 이야기하는 것을
+                좋아합니다. 여가 시간에는 등산, 체스, 코딩과 사진 촬영 같은
+                새로운 기술을 배우는 것을 즐깁니다.
               </p>
             </div>
           </Card>
