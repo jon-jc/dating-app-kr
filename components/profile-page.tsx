@@ -1,12 +1,12 @@
-
-import { Button } from "@/components/ui/button"
-import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs";
+import Image from "next/image";
+import { CoffeeIcon, FilmIcon, BackpackIcon, LuggageIcon, BookIcon } from "lucide-react";
 
 export default function ProfilePage() {
   return (
-    <div>
-      <div>
+    <div className="w-full">
+      <div className="flex justify-center mb-4">
         <Button className="rounded-full" size="icon" variant="outline">
           <Image
             alt="User Avatar"
@@ -14,15 +14,15 @@ export default function ProfilePage() {
             height={40}
             src="/model.png"
             style={{
-              aspectRatio: "40/40",
+              aspectRatio: "1 / 1",
               objectFit: "cover",
             }}
             width={40}
           />
         </Button>
       </div>
-      <div className="w-[400px]">
-        <div className="bg-gray-100 dark:bg-gray-800 p-6">
+      <div className="max-w-md mx-auto">
+        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
           <div className="flex items-center gap-4">
             <Image
               alt="User Avatar"
@@ -30,7 +30,7 @@ export default function ProfilePage() {
               height={64}
               src="/model.png"
               style={{
-                aspectRatio: "64/64",
+                aspectRatio: "1 / 1",
                 objectFit: "cover",
               }}
               width={64}
@@ -41,10 +41,10 @@ export default function ProfilePage() {
             </div>
           </div>
         </div>
-        <Tabs className="border-b" defaultValue="about">
+        <Tabs className="border-b mt-4" defaultValue="about">
           <TabsList className="flex">
-            <TabsTrigger value="about">About & Photos</TabsTrigger>
-            <TabsTrigger value="interests">Interests</TabsTrigger>
+            <TabsTrigger value="about" className="flex-1">About & Photos</TabsTrigger>
+            <TabsTrigger value="interests" className="flex-1">Interests</TabsTrigger>
           </TabsList>
           <TabsContent className="p-6" value="about">
             <div className="space-y-4">
@@ -72,48 +72,16 @@ export default function ProfilePage() {
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4">
-                <Image
-                  alt="Photo 1"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
-                <Image
-                  alt="Photo 2"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
-                <Image
-                  alt="Photo 3"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
-                <Image
-                  alt="Photo 4"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
-                <Image
-                  alt="Photo 5"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
-                <Image
-                  alt="Photo 6"
-                  className="aspect-square rounded-lg object-cover"
-                  height={100}
-                  src="/model.png"
-                  width={100}
-                />
+                {[...Array(6)].map((_, index) => (
+                  <Image
+                    key={index}
+                    alt={`Photo ${index + 1}`}
+                    className="aspect-square rounded-lg object-cover"
+                    height={100}
+                    src="/model.png"
+                    width={100}
+                  />
+                ))}
               </div>
             </div>
           </TabsContent>
@@ -144,122 +112,5 @@ export default function ProfilePage() {
         </Tabs>
       </div>
     </div>
-  )
-}
-
-function BackpackIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-      <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
-      <path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5" />
-      <path d="M8 10h8" />
-      <path d="M8 18h8" />
-    </svg>
-  )
-}
-
-
-function BookIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-    </svg>
-  )
-}
-
-
-function CoffeeIcon(props:  React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M10 2v2" />
-      <path d="M14 2v2" />
-      <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
-      <path d="M6 2v2" />
-    </svg>
-  )
-}
-
-
-function FilmIcon(props:React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="18" x="3" y="3" rx="2" />
-      <path d="M7 3v18" />
-      <path d="M3 7.5h4" />
-      <path d="M3 12h18" />
-      <path d="M3 16.5h4" />
-      <path d="M17 3v18" />
-      <path d="M17 7.5h4" />
-      <path d="M17 16.5h4" />
-    </svg>
-  )
-}
-
-
-function LuggageIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M6 20h0a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h0" />
-      <path d="M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14" />
-      <path d="M10 20h4" />
-      <circle cx="16" cy="20" r="2" />
-      <circle cx="8" cy="20" r="2" />
-    </svg>
-  )
+  );
 }
