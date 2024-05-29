@@ -7,13 +7,15 @@ import Image from "next/image";
 import { HeartPulseIcon } from "lucide-react";
 import ProfilePage from "./profile-page";
 
+
 const Landing = () => {
   return (
     <main className="flex flex-col min-h-[100dvh]">
       <div className="flex-1 bg-gray-100 dark:bg-gray-900 p-4 md:p-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          <ProfilePage />
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          
           <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out hover:-translate-y-2">
+          <ProfilePage />
             <Link className="absolute inset-0 z-10" href="#">
               <span className="sr-only">View Profile</span>
             </Link>
