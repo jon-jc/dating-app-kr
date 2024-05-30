@@ -1,8 +1,8 @@
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function ProfilePage() {
   return (
@@ -68,7 +68,7 @@ export default function ProfilePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function DeleteIcon(props: React.SVGProps<SVGSVGElement>) {
@@ -89,9 +89,8 @@ function DeleteIcon(props: React.SVGProps<SVGSVGElement>) {
       <line x1="18" x2="12" y1="9" y2="15" />
       <line x1="12" x2="18" y1="9" y2="15" />
     </svg>
-  )
+  );
 }
-
 
 function ShareIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -111,5 +110,5 @@ function ShareIcon(props: React.SVGProps<SVGSVGElement>) {
       <polyline points="16 6 12 2 8 6" />
       <line x1="12" x2="12" y1="2" y2="15" />
     </svg>
-  )
+  );
 }

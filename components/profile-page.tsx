@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs";
 import Image from "next/image";
-import { CoffeeIcon, FilmIcon, BackpackIcon, LuggageIcon, BookIcon } from "lucide-react";
+import {
+  CoffeeIcon,
+  FilmIcon,
+  BackpackIcon,
+  LuggageIcon,
+  BookIcon,
+} from "lucide-react";
 
 export default function ProfilePage() {
   return (
@@ -37,21 +43,28 @@ export default function ProfilePage() {
             />
             <div>
               <h3 className="text-lg font-semibold">Hana Kim</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Seoul, Korea</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Seoul, Korea
+              </p>
             </div>
           </div>
         </div>
         <Tabs className="border-b mt-4" defaultValue="about">
           <TabsList className="flex">
-            <TabsTrigger value="about" className="flex-1">About & Photos</TabsTrigger>
-            <TabsTrigger value="interests" className="flex-1">Interests</TabsTrigger>
+            <TabsTrigger value="about" className="flex-1">
+              About & Photos
+            </TabsTrigger>
+            <TabsTrigger value="interests" className="flex-1">
+              Interests
+            </TabsTrigger>
           </TabsList>
           <TabsContent className="p-6" value="about">
             <div className="space-y-4">
               <p>
-                Hi there! I am Hana, a 27-year-old marketing professional living in Seoul. I love exploring new cafes,
-                watching Korean dramas, and going on hikes in the beautiful mountains around the city. I am looking for a
-                kind, thoughtful partner to share my life with.
+                Hi there! I am Hana, a 27-year-old marketing professional living
+                in Seoul. I love exploring new cafes, watching Korean dramas,
+                and going on hikes in the beautiful mountains around the city. I
+                am looking for a kind, thoughtful partner to share my life with.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -60,15 +73,21 @@ export default function ProfilePage() {
                 </div>
                 <div>
                   <p className="text-sm font-medium">Location</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Seoul, Korea</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Seoul, Korea
+                  </p>
                 </div>
                 <div>
                   <p className="text-sm font-medium">Occupation</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Marketing</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Marketing
+                  </p>
                 </div>
                 <div>
                   <p className="text-sm font-medium">Relationship Status</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Single</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Single
+                  </p>
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4">
