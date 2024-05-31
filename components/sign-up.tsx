@@ -8,20 +8,18 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function SignUpPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-gradient-to-br from-[#8e2de2] to-[#4a00e0] px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-[480px] space-y-8 rounded-2xl bg-white p-8 shadow-2xl dark:bg-gray-950">
+    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-white px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[480px] space-y-8 rounded-2xl bg-white p-8 shadow-2xl">
         <div className="flex flex-col items-center space-y-2">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#8e2de2] to-[#4a00e0]">
             <HeartIcon className="h-6 w-6 text-white" />
           </div>
           <h1 className="text-2xl font-bold tracking-tight">Exclusive</h1>
-          <p className="text-gray-500 dark:text-gray-400">
-            The premier Korean dating app
-          </p>
+          <p className="text-gray-500">The premier Korean dating app</p>
         </div>
         <div className="space-y-4">
           <Tabs defaultValue="sign-in">
-            <TabsList className="grid grid-cols-2 rounded-lg bg-gray-100 p-1 dark:bg-gray-800">
+            <TabsList className="grid grid-cols-2 rounded-lg bg-gray-100 p-1">
               <TabsTrigger value="sign-in">Sign In</TabsTrigger>
               <TabsTrigger value="register">Register</TabsTrigger>
             </TabsList>
@@ -88,7 +86,7 @@ export default function SignUpPage() {
                 <div className="space-y-2">
                   <Label htmlFor="photo">Profile Photo</Label>
                   <div className="flex items-center space-x-4">
-                    <Avatar className="h-12 w-12 border-2 border-gray-200 dark:border-gray-800">
+                    <Avatar className="h-12 w-12 border-2 border-gray-200">
                       <img src="/placeholder.svg" alt="Profile Photo" />
                       <AvatarFallback>JP</AvatarFallback>
                     </Avatar>
