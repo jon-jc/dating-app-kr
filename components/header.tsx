@@ -23,6 +23,14 @@ const Header = () => {
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
         </Link>
+        <Link href="/sign-in">
+          <Button size="sm" variant={"ghost"}>
+            Sign up
+          </Button>
+        </Link>
+        <Link href="/sign-up">
+          <Button size="sm">Register</Button>
+        </Link>
       </div>
     </header>
   );
