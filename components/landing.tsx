@@ -61,7 +61,6 @@ const profiles: Profile[] = [
   {
     name: "Eunji, 26 (은지, 26)",
     location: "Daejeon (대전)",
-
     hobbies:
       "My hobbies include dancing, baking, and reading science fiction books. I also enjoy going to concerts. 제 취미는 춤추기, 베이킹, 공상 과학 책 읽기입니다. 또한 콘서트에 가는 것을 즐깁니다.",
     image: "/model.png",
@@ -71,6 +70,7 @@ const profiles: Profile[] = [
 const Landing: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(profiles.length - 1);
   const [lastDirection, setLastDirection] = useState<string | undefined>();
+  const [isDragging, setIsDragging] = useState(false);
   const currentIndexRef = useRef(currentIndex);
 
   const childRefs = useMemo(
@@ -85,6 +85,7 @@ const Landing: React.FC = () => {
     setLastDirection(direction);
     setCurrentIndex(index - 1);
     currentIndexRef.current = index - 1;
+    setIsDragging(false);
   };
 
   const outOfFrame = (name: string, idx: number) => {
@@ -100,13 +101,20 @@ const Landing: React.FC = () => {
   return (
     <main className="flex flex-col min-h-screen">
       <div className="flex-1 bg-gray-100 dark:bg-gray-900 p-4 md:p-6 relative">
-        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 font-bold">
-          DISLIKE
-        </div>
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 font-bold">
-          LIKE
-        </div>
-        <div className="max-w-6xl mx-auto flex justify-center relative pb">
+        {isDragging && (
+          <>
+            <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-black font-bold animate-pulse">
+              DISLIKE
+            </div>
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-black font-bold animate-pulse">
+              LIKE
+            </div>
+          </>
+        )}
+        <div
+          className="max-w-6xl mx-auto flex justify-center relative"
+          style={{ height: "75vh" }}
+        >
           {profiles.map((profile, index) => (
             <TinderCard
               ref={childRefs[index]}
@@ -115,8 +123,10 @@ const Landing: React.FC = () => {
               onSwipe={(dir) => swiped(dir, profile.name, index)}
               onCardLeftScreen={() => outOfFrame(profile.name, index)}
               preventSwipe={["up", "down"]}
+              onSwipeRequirementFulfilled={() => setIsDragging(true)}
+              onSwipeRequirementUnfulfilled={() => setIsDragging(false)}
             >
-              <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out w-full mx-auto">
+              <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out w-full max-w-md h-full mx-auto">
                 <ProfilePage />
                 <Link className="absolute inset-0 z-10" href="#">
                   <span className="sr-only">View Profile</span>

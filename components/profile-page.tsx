@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { TabsTrigger, TabsList, TabsContent, Tabs } from "@/components/ui/tabs";
 import Image from "next/image";
@@ -60,12 +61,6 @@ export default function ProfilePage() {
           </TabsList>
           <TabsContent className="p-6" value="about">
             <div className="space-y-4">
-              <p>
-                Hi there! I am Hana, a 27-year-old marketing professional living
-                in Seoul. I love exploring new cafes, watching Korean dramas,
-                and going on hikes in the beautiful mountains around the city. I
-                am looking for a kind, thoughtful partner to share my life with.
-              </p>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm font-medium">Age</p>
@@ -89,18 +84,6 @@ export default function ProfilePage() {
                     Single
                   </p>
                 </div>
-              </div>
-              <div className="grid grid-cols-3 gap-4">
-                {[...Array(6)].map((_, index) => (
-                  <Image
-                    key={index}
-                    alt={`Photo ${index + 1}`}
-                    className="aspect-square rounded-lg object-cover"
-                    height={100}
-                    src="/model.png"
-                    width={100}
-                  />
-                ))}
               </div>
             </div>
           </TabsContent>
