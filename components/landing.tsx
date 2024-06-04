@@ -12,8 +12,8 @@ import {
   PlusIcon,
   CoinsIcon,
 } from "lucide-react";
-import ProfilePage from "./profile-page";
 import TinderCard from "react-tinder-card";
+import ProfilePage from "./profile-page";
 
 interface Profile {
   name: string;
@@ -70,8 +70,7 @@ const profiles: Profile[] = [
 const Landing: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(profiles.length - 1);
   const [lastDirection, setLastDirection] = useState<string | undefined>();
-  const [isDragging, setIsDragging] = useState(false);
-  const currentIndexRef = useRef(currentIndex);
+  const [gone] = useState<Set<number>>(new Set());
 
   const childRefs = useMemo(
     () =>
@@ -81,27 +80,21 @@ const Landing: React.FC = () => {
     []
   );
 
-  const swiped = (direction: string, nameToDelete: string, index: number) => {
+  const swiped = (direction: string, index: number) => {
+    gone.add(index);
     setLastDirection(direction);
     setCurrentIndex(index - 1);
-    currentIndexRef.current = index - 1;
-    setIsDragging(false);
   };
 
   const outOfFrame = (name: string, idx: number) => {
     console.log(`${name} (${idx}) left the screen!`);
-  };
-
-  const swipe = async (dir: string) => {
-    if (currentIndex >= 0 && currentIndex < profiles.length) {
-      await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
-    }
+    gone.add(idx);
   };
 
   return (
     <main className="flex flex-col min-h-screen">
       <div className="flex-1 bg-gray-100 dark:bg-gray-900 p-4 md:p-6 relative">
-        {isDragging && (
+        {lastDirection && (
           <>
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-black font-bold animate-pulse">
               DISLIKE
@@ -120,51 +113,51 @@ const Landing: React.FC = () => {
               ref={childRefs[index]}
               className="swipe absolute"
               key={profile.name}
-              onSwipe={(dir) => swiped(dir, profile.name, index)}
+              onSwipe={(dir) => swiped(dir, index)}
               onCardLeftScreen={() => outOfFrame(profile.name, index)}
               preventSwipe={["up", "down"]}
-              onSwipeRequirementFulfilled={() => setIsDragging(true)}
-              onSwipeRequirementUnfulfilled={() => setIsDragging(false)}
             >
-              <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out w-full max-w-md h-full mx-auto">
-                <ProfilePage />
-                <Link className="absolute inset-0 z-10" href="#">
-                  <span className="sr-only">View Profile</span>
-                </Link>
-                <Image
-                  alt="Profile"
-                  className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                  src={profile.image}
-                  width={500}
-                  height={500}
-                  style={{
-                    aspectRatio: "1 / 1",
-                    objectFit: "cover",
-                  }}
-                />
-                <div className="bg-white dark:bg-gray-950 p-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-bold text-lg sm:text-xl">
-                        {profile.name}
-                      </h3>
-                      <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
-                        {profile.location}
-                      </p>
+              {!gone.has(index) && (
+                <Card className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 ease-in-out w-full max-w-md h-full mx-auto">
+                  <ProfilePage />
+                  <Link className="absolute inset-0 z-10" href="#">
+                    <span className="sr-only">View Profile</span>
+                  </Link>
+                  <Image
+                    alt="Profile"
+                    className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
+                    src={profile.image}
+                    width={500}
+                    height={500}
+                    style={{
+                      aspectRatio: "1 / 1",
+                      objectFit: "cover",
+                    }}
+                  />
+                  <div className="bg-white dark:bg-gray-950 p-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-bold text-lg sm:text-xl">
+                          {profile.name}
+                        </h3>
+                        <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
+                          {profile.location}
+                        </p>
+                      </div>
+                      <Button
+                        className="rounded-full"
+                        size="icon"
+                        variant="ghost"
+                      >
+                        <HeartIcon className="w-5 h-5 fill-primary" />
+                      </Button>
                     </div>
-                    <Button
-                      className="rounded-full"
-                      size="icon"
-                      variant="ghost"
-                    >
-                      <HeartIcon className="w-5 h-5 fill-primary" />
-                    </Button>
+                    <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
+                      {profile.hobbies}
+                    </p>
                   </div>
-                  <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-2">
-                    {profile.hobbies}
-                  </p>
-                </div>
-              </Card>
+                </Card>
+              )}
             </TinderCard>
           ))}
         </div>
