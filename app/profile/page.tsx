@@ -1,13 +1,14 @@
-import Header from '@/components/header'
-import ProfilePage from '@/components/profile'
+import CreateProfile from "@/components/create-profile";
+import Header from "@/components/header";
+import ProfilePage from "@/components/profile";
 
 const page = () => {
   return (
     <>
-    <Header />
-    <ProfilePage />
+      <Header />
+      <CreateProfile />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
