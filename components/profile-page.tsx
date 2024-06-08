@@ -55,9 +55,6 @@ export default function ProfilePage() {
             <TabsTrigger value="about" className="flex-1">
               About & Photos
             </TabsTrigger>
-            <TabsTrigger value="interests" className="flex-1">
-              Interests
-            </TabsTrigger>
           </TabsList>
           <TabsContent className="p-6" value="about">
             <div className="space-y-4">
@@ -84,30 +81,6 @@ export default function ProfilePage() {
                     Single
                   </p>
                 </div>
-              </div>
-            </div>
-          </TabsContent>
-          <TabsContent className="p-6" value="interests">
-            <div className="grid gap-2">
-              <div className="flex items-center gap-2">
-                <CoffeeIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-sm">Exploring Cafes</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <FilmIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-sm">Watching Korean Dramas</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <BackpackIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-sm">Hiking in the Mountains</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <LuggageIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-sm">Traveling to New Places</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookIcon className="h-5 w-5 text-gray-500 dark:text-gray-400" />
-                <p className="text-sm">Reading Fiction Novels</p>
               </div>
             </div>
           </TabsContent>
