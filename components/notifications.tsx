@@ -6,7 +6,6 @@ import Header from "./header";
 export default function NotificationsPage() {
   return (
     <div className="flex flex-col h-full">
-      <Header />
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Notifications</h2>

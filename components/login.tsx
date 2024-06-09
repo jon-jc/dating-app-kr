@@ -11,7 +11,7 @@ export default function LoginPage() {
             Sign in to your account
           </h1>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Exclusive Korean dating app
+            Luna Dating
           </p>
         </div>
         <form className="space-y-4">
