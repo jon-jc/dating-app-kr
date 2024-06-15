@@ -1,117 +1,80 @@
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function SignUpPage() {
   return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-white px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-[480px] space-y-8 rounded-2xl bg-white p-8 shadow-2xl">
-        <div className="flex flex-col items-center space-y-2">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#8e2de2] to-[#4a00e0]">
-            <HeartIcon className="h-6 w-6 text-white" />
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight">Luna Dating</h1>
-          <p className="text-gray-500">The premier Korean dating app</p>
+    <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-950">
+      <div className="w-full max-w-md space-y-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+            Sign up for an account
+          </h1>
+          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            Luna Dating
+          </p>
         </div>
-        <div className="space-y-4">
-          <Tabs defaultValue="sign-in">
-            <TabsList className="grid grid-cols-2 rounded-lg bg-gray-100 p-1">
-              <TabsTrigger value="sign-in">Sign In</TabsTrigger>
-              <TabsTrigger value="register">Register</TabsTrigger>
-            </TabsList>
-            <TabsContent value="sign-in">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email / Username</Label>
-                  <Input
-                    id="email"
-                    type="text"
-                    placeholder="Enter your email or username"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id="remember" />
-                    <Label htmlFor="remember" className="text-sm font-medium">
-                      Remember me
-                    </Label>
-                  </div>
-                  <Link
-                    href="#"
-                    className="text-sm font-medium text-[#8e2de2] hover:underline"
-                    prefetch={false}
-                  >
-                    Forgot Password?
-                  </Link>
-                </div>
-                <Button type="submit" className="w-full">
-                  Sign In
-                </Button>
-              </form>
-            </TabsContent>
-            <TabsContent value="register">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" type="text" placeholder="Enter your name" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="photo">Profile Photo</Label>
-                  <div className="flex items-center space-x-4">
-                    <Avatar className="h-12 w-12 border-2 border-gray-200">
-                      <img src="/placeholder.svg" alt="Profile Photo" />
-                      <AvatarFallback>JP</AvatarFallback>
-                    </Avatar>
-                    <Button variant="outline" size="sm">
-                      Upload
-                    </Button>
-                  </div>
-                </div>
-                <Button type="submit" className="w-full">
-                  Register
-                </Button>
-              </form>
-            </TabsContent>
-          </Tabs>
-          <div className="flex items-center justify-center space-x-4">
-            <Button variant="outline" className="w-full">
-              <ChromeIcon className="h-5 w-5 mr-2" />
-              Sign in with Google
+        <form className="space-y-4">
+          <div>
+            <Label htmlFor="email" className="sr-only">
+              Email address
+            </Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="Email address"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50 dark:focus:border-gray-600 dark:focus:ring-gray-600"
+            />
+          </div>
+          <div>
+            <Label htmlFor="password" className="sr-only">
+              Password
+            </Label>
+            <Input
+              id="password"
+              type="password"
+              placeholder="Password"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50 dark:focus:border-gray-600 dark:focus:ring-gray-600"
+            />
+          </div>
+          <div>
+            <Label htmlFor="confirm-password" className="sr-only">
+              Confirm Password
+            </Label>
+            <Input
+              id="confirm-password"
+              type="password"
+              placeholder="Confirm Password"
+              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-50 dark:focus:border-gray-600 dark:focus:ring-gray-600"
+            />
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <Button
+              variant="outline"
+              className="flex items-center justify-center gap-2 rounded-md border-gray-300 dark:border-gray-700"
+            >
+              <GithubIcon className="h-5 w-5" />
+              <span className="sr-only">Sign up with GitHub</span>
             </Button>
-            <Button variant="outline" className="w-full">
-              <FacebookIcon className="h-5 w-5 mr-2" />
-              Sign in with Facebook
+            <Button
+              variant="outline"
+              className="flex items-center justify-center gap-2 rounded-md border-gray-300 dark:border-gray-700"
+            >
+              <FacebookIcon className="h-5 w-5" />
+              <span className="sr-only">Sign up with Facebook</span>
+            </Button>
+            <Button
+              variant="outline"
+              className="flex items-center justify-center gap-2 rounded-md border-gray-300 dark:border-gray-700"
+            >
+              <ChromeIcon className="h-5 w-5" />
+              <span className="sr-only">Sign up with Google</span>
             </Button>
           </div>
-        </div>
+          <Button className="w-full justify-center rounded-md border border-transparent bg-gray-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200 dark:focus:ring-gray-600 dark:focus:ring-offset-gray-950">
+            Sign up
+          </Button>
+        </form>
       </div>
     </div>
   );
@@ -159,7 +122,7 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function HeartIcon(props: React.SVGProps<SVGSVGElement>) {
+function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -173,7 +136,8 @@ function HeartIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+      <path d="M9 18c-4.51 2-5-2-7-2" />
     </svg>
   );
 }
